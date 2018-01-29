@@ -14,8 +14,14 @@ namespace VTest
 
         public string Post { get; private set; }
 
-        private void OnPost(object sender, EventArgs e) => Post = postText.Text;
+        void OnPost(object sender, EventArgs e)
+        {
+            Post = postText.Text;
+        }
 
-        private void OnRequest(Object sender, EventArgs e) => viewDisplay.Text = Post;
+        void OnRequest(Object sender, EventArgs e)
+        {
+            viewDisplay.Text = Post;
+        }
     }
 }

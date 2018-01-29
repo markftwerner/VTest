@@ -29,7 +29,7 @@
             <Label x:Name="viewDisplay" Text="This is where the post will be displayed" FontSize="Large" />
             <Button x:Name="requestPost" Text="Request Post" Clicked="OnRequest" />
 
-            <BoxView HeightRequest="200"/>
+            <BoxView HeightRequest="50"/>
 
             <Label x:Name="viewDebug" Text="Debug" />
             
