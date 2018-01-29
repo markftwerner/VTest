@@ -3,9 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:VTest"
              x:Class="VTest.MainPage">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <!--<StackLayout Orientation="Horizontal">
+                <Button Text="Menu" HorizontalOptions="Start"/>
+                <Label Text="VTBoard" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center" 
+                       FontSize="Large" />
+            </StackLayout>-->
+            <Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" BackgroundColor="Aqua">
+                <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
+                <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
+            </StackLayout>
 
+            <BoxView BackgroundColor="Beige"/>
+
+            <Entry Placeholder="Enter Message Here" />
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
