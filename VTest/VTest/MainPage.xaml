@@ -14,15 +14,25 @@
             </StackLayout>-->
             <Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
 
-            <StackLayout Orientation="Horizontal" BackgroundColor="Aqua">
+            <StackLayout Orientation="Horizontal">
                 <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
                 <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
             </StackLayout>
 
-            <BoxView BackgroundColor="Beige"/>
+            <BoxView />
 
-            <Entry Placeholder="Enter Message Here" Completed="Entry_Completed"/>
+            <Entry x:Name="postText" Placeholder="Enter Message Here" />
+            <Button x:Name="submitPost" Text="Post" Clicked="OnPost" HorizontalOptions="EndAndExpand" />
 
+            <BoxView HeightRequest="50"/>
+
+            <Label x:Name="viewDisplay" Text="This is where the post will be displayed" FontSize="Large" />
+            <Button x:Name="requestPost" Text="Request Post" Clicked="OnRequest" />
+
+            <BoxView HeightRequest="200"/>
+
+            <Label x:Name="viewDebug" Text="Debug" />
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>

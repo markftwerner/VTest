@@ -23,11 +23,6 @@ namespace VTest.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
-
-        void Entry_Completed (object sender, EventArgs e)
-        {
-            var post = ((Entry)sender).Text;
-        }
     }
 }
 
