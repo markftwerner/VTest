@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
 
 namespace VTest.Droid
 {
@@ -21,6 +22,11 @@ namespace VTest.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+        }
+
+        void Entry_Completed (object sender, EventArgs e)
+        {
+            var post = ((Entry)sender).Text;
         }
     }
 }

@@ -21,7 +21,7 @@
 
             <BoxView BackgroundColor="Beige"/>
 
-            <Entry Placeholder="Enter Message Here" />
+            <Entry Placeholder="Enter Message Here" Completed="Entry_Completed"/>
 
         </StackLayout>
     </ScrollView>
